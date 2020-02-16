@@ -126,16 +126,8 @@ sqlparse==0.3.0
 sympy==1.5.1
 tabulate==0.8.6
 tensor2tensor==1.14.1
-tensorboard==2.1.0
-tensorflow==2.0.0
 tensorflow-cpu==1.15.0
 tensorflow-cpu-estimator==1.15.1
-tensorflow-datasets==2.0.0
-tensorflow-estimator==2.0.0
-tensorflow-gan==2.0.0
-tensorflow-gpu==2.1.0
-tensorflow-gpu-estimator==2.1.0
-tensorflow-hub==0.7.0
 tensorflow-metadata==0.21.1
 tensorflow-probability==0.7.0
 termcolor==1.1.0
