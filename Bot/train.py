@@ -6,12 +6,10 @@ import tensorflow as tf
 import tflearn
 import random
 import pickle
-
-from Bot import path
 import json
 
 stemmer = LancasterStemmer()
-with open(path.getJsonPath()) as json_data:
+with open('content.json') as json_data:
     intents = json.load(json_data)
 
 words = []
@@ -64,9 +62,9 @@ net = tflearn.fully_connected(net, 8)
 net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net)
 
-model = tflearn.DNN(net, tensorboard_dir=path.getPath('train_logs'))
+model = tflearn.DNN(net, tensorboard_dir='train_logs')
 model.fit(train_x, train_y, n_epoch=20000, batch_size=500, show_metric=True)
-model.save(path.getPath('model.tflearn'))
+model.save('model.tflearn')
 
 
 def clean_up_sentence(sentence):
@@ -87,5 +85,5 @@ def bow(sentence, words, show_details=False):
     return np.array(bag)
 
 
-pickle.dump({'words': words, 'classes': classes, 'train_x': train_x, 'train_y': train_y},
-            open(path.getPath('trained_data'), "wb"))
+with open('trained_data','wb') as f:
+    pickle.dump({'words': words, 'classes': classes, 'train_x': train_x, 'train_y': train_y},f)
