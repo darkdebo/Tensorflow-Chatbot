@@ -23,7 +23,7 @@ Something will coming soon
 
 ## Technology used:
 
-1.tensorflow
+1.tensorflow /n
 2.Python
 3.Django for web wrapper
 4.TKinter
