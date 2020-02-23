@@ -23,10 +23,14 @@ Something will coming soon
 
 ## Technology used:
 
-1.tensorflow /n
+1.tensorflow 
+
 2.Python
+
 3.Django for web wrapper
+
 4.TKinter
+
 5.Pygubu
 
 ## How it work:
